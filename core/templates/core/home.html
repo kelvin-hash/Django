@@ -1,0 +1,28 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero">
+    <h2>Welcome to Freelancer Platform</h2>
+    <p>Find top freelancers or post your jobs today!</p>
+    <img src="{% static 'core/images/hero.jpg' %}" alt="Freelancers at work" style="width:100%; max-height:400px; object-fit:cover;">
+</section>
+
+<hr>
+
+<section class="about">
+    <h2>About Us</h2>
+    <p>
+       Freelancer Platform is a modern online marketplace designed to connect businesses, startups, and individuals with highly skilled freelancers across a variety of industries. Whether you are looking to hire talent for a project or showcase your professional skills to a global audience, our platform makes the process simple, secure, and efficient. We provide a user-friendly interface that allows clients to post jobs, review freelancer profiles, and communicate seamlessly with potential collaborators. Freelancers can create detailed profiles, highlight their expertise, and gain access to new opportunities every day. Our mission is to empower both clients and freelancers by creating a trusted space for collaboration, innovation, and growth. With tools that support project management,
+       communication, and secure payments, Freelancer Platform ensures every project is handled professionally from start to finish.
+    </p>
+</section>
+
+<div class="message">
+    <p>Find your next hire for a short task or long-term growth</p>
+</div>
+
+{% endblock %}

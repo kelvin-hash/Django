@@ -1,0 +1,43 @@
+/* =====================
+   FREELANCER CARDS
+===================== */
+
+/* Container grid for all freelancer cards */
+.freelancer-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;              /* space between cards */
+    margin-top: 20px;
+}
+
+/* Individual freelancer card */
+.freelancer-card {
+    position: relative;     /* allows for absolute-positioned elements inside later */
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/* Hover effect: subtle lift and stronger shadow */
+.freelancer-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Freelancer Name */
+.freelancer-card h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #111827;
+}
+
+/* Freelancer Details (skill, email, bio) */
+.freelancer-card p {
+    margin: 5px 0;
+    color: #555;
+    font-size: 14px;
+    line-height: 1.5;
+}

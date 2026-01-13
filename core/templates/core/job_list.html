@@ -1,0 +1,24 @@
+{% extends 'core/base.html' %}
+{% block title %}Jobs List{% endblock %}
+
+{% block content %}
+<div class="freelancer_header">
+ <h2>All Jobs</h2>
+ <a href="{% url 'create_job' %}"><button>Create Job</button></a>
+</div>
+
+{% if jobs %}
+<section class="freelancer_list">
+    
+    {% for job in jobs %}
+        <div class="freelancer_card">
+            <p>{{ job.title }} - {{ job.description|truncatewords:10 }}</p>
+        </div>
+    {% endfor %}
+   
+</section>
+{% else %}
+    <p>No jobs yet.</p>
+{% endif %}
+
+{% endblock %}

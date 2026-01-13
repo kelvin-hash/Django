@@ -1,0 +1,25 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="freelancer_header">
+    <h2>All Freelancers</h2>
+    <a href="{% url 'create_freelancer' %}"> <button>Create Freelancer</button></a>
+</div>
+
+{% if freelancers %}
+<section class="freelancer_list">
+    {% for freelancer in freelancers %}
+    <div class="freelancer_card">
+        <h3>{{ freelancer.name }}</h3>
+        <p><strong>Skill:</strong> {{ freelancer.skill }}</p>
+        <p><strong>Email:</strong> {{ freelancer.email }}</p>
+        <p>{{ freelancer.bio }}</p>
+    </div>
+    {% endfor %}
+</section>
+{% else %}
+<p>No freelancers found.</p>
+{% endif %}
+
+{% endblock %}

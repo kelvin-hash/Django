@@ -1,0 +1,38 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Freelancer Platform{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'core/style.css' %}">
+</head>
+<body>
+
+    <!-- NAVIGATION BAR -->
+    <nav class="navbar">
+        <div class="nav-left">
+        <h1 class="logo">Freelancer Platform</h1>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'freelancer_list' %}">Freelancers</a></li>
+            <li><a href="{% url 'job_list' %}">Jobs</a></li>
+        </ul>
+        <div class="nav-right">
+            <a href="#" class="btn btn-outline">Login</a>
+        </div>
+    </nav>
+
+    <!-- PAGE CONTENT -->
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer class="footer">
+          <p>© {% now "Y" %} FreelancerPlatform. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

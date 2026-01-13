@@ -1,0 +1,204 @@
+/* =====================
+   GLOBAL STYLES
+===================== */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+    margin: 0;              /* IMPORTANT: remove default browser margins */
+    padding: 0;             /* navbar should touch top */
+}
+
+main {
+    padding: 40px;
+}
+
+h1 {
+    color: hsl(119, 70%, 83%);
+}
+
+h2{
+    text-align: center;
+}
+
+/* =====================
+   NAVIGATION BAR
+===================== */
+.navbar {
+    background:white;
+    border-bottom: 1px solid #e5e7eb;
+    padding: 15px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Logo / brand */
+.logo {
+    font-size: 20px;
+    font-weight: 700;
+    color: hsla(114, 87%, 80%, 0.753);
+    text-decoration: none;
+}
+
+/* Navigation links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #374151;
+    font-weight: 500;
+    padding-bottom: 4px;
+}
+
+.nav-links a:hover {
+    color: hsla(114, 87%, 80%, 0.753);
+    border-bottom: 1px solid #2feb25;
+}
+
+/* Right-side actions */
+.nav-right {
+    display: flex;
+    gap: 12px;
+}
+
+/* Buttons (reused everywhere) */
+.btn {
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.btn-outline {
+    border: 1px solid #2feb25;
+    color: hsla(114, 87%, 80%, 0.753);
+    background: transparent;
+}
+
+.btn-outline:hover {
+    background: #eff6ff;
+}
+
+.btn-primary {
+    background: 1px solid #2feb25;
+    color: black;
+}
+
+.btn-primary:hover {
+    background:1px solid #2feb25;
+}
+
+/* ABOUT SECTION */
+.about {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 6px;
+    max-width: 800px;
+    margin: 40px auto;
+    text-align: center;
+}
+
+.about h2 {
+    margin-bottom: 15px;
+    color: #111;
+}
+
+.about p {
+    color: #555;
+    line-height: 1.6;
+}
+
+.message{
+    background: lab(85.41% -82.62 78.72);
+    padding: 30px;
+    border-radius: 6px;
+    max-width: 1200px;
+    margin: 10px auto;
+    text-align: center;
+}
+
+.message p{
+    color: #000;
+    font-size: xx-large;
+    font-style: oblique;
+    font-weight: 500;
+
+}
+
+.freelancer_list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;              /* space between cards */
+    margin-top: 20px;
+}
+
+.freelancer_card {
+    position: relative;     /* allows for absolute-positioned elements inside later */
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+
+/* =====================
+   FORMS
+===================== */
+/* Simple centered form with green borders */
+form {
+    max-width: 500px;
+    margin: 50px auto;  /* centers form horizontally with top spacing */
+    padding: 20px;
+    border: 2px solid #198754;  /* green border */
+    border-radius: 6px;
+    background: #fff;
+}
+
+form input, 
+form textarea, 
+form select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 12px;
+    border: 1px solid #198754;  /* green border for inputs */
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+form button {
+    background-color: #198754; /* green button */
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+/* =====================
+   HERO / SECTIONS
+===================== */
+.hero {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+section {
+    margin: 2rem 0;
+}
+.footer {
+    background: #000;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
