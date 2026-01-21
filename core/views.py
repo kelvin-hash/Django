@@ -1,6 +1,10 @@
 from django.shortcuts import render, redirect
 from .models import Job, Freelancer
 from .forms import JobForm, FreelancerForm
+from django.http import HttpResponse
+from .serializer import JobSerializer, FreelancerSerializer
+from rest_framework.decorators import api_view
+from rest_framework.response import Response
 
 
 def create_job(request):
@@ -43,3 +47,12 @@ def home(request):
 def job_list(request):
     jobs = Job.objects.all()
     return render(request, 'core/job_list.html', {'jobs': jobs})
+
+def hello_world(request):
+    return HttpResponse("Hello, World!")
+
+@api_view(['GET'])
+def job_list_api(request):
+    jobs = Job.objects.all()
+    serializer = JobSerializer(jobs, many=True)
+    return Response(serializer.data)

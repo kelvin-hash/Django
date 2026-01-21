@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'jazzmin',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -38,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'core',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
@@ -116,3 +118,17 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
 
 STATIC_URL = 'static/'
+
+JAZZMIN_SETTINGS = {
+    "site_title": "Freelancer Platform Admin",
+    "site_header": "Freelancer Platform",
+    "welcome_sign": "Welcome to the Freelancer Platform Admin",
+    "search_model": "auth.User",
+    "show_sidebar": True,
+    "navigation_expanded": True,
+    "show_ui_builder": True,
+}
+
+JAZZMIN_UI_TWEAKS = {
+    "theme": "sketchy",
+}

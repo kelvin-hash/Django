@@ -14,7 +14,8 @@ class Freelancer(models.Model):
 class Job(models.Model):
     title = models.CharField(max_length=200)
     description = models.TextField()
-    budget = models.IntegerField()
+    budgetPerHour = models.IntegerField()
+    hours= models.IntegerField()
     freelancer = models.ForeignKey(
         Freelancer,
         on_delete=models.SET_NULL,

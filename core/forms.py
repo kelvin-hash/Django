@@ -4,7 +4,7 @@ from .models import Job, Freelancer
 class JobForm(forms.ModelForm):
     class Meta:
         model = Job
-        fields = ['title', 'description', 'budget']
+        fields = ['title', 'description', 'budgetPerHour']
 
 
 class FreelancerForm(forms.ModelForm):
